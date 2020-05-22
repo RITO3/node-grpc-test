@@ -17,7 +17,7 @@ npm install --save-dev jest-html-reporters
 npm install --save-dev jest-junit
 ```
 
-## ESLint関係
+### ESLint関係
 
 ```sh
 npm install --save-dev eslint
