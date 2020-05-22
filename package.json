@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prebuild": "rimraf ./dist",
+    "build": "tsc",
+    "start:server": "node ./dist/server.js",
+    "start:client": "node ./dist/client.js",
+    "grpc:generate": "sh ./shell/protoc.sh",
+    "postgrpc:generate":"npm run eslint",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint ./src/ --ext .ts -f html -o ./result/eslint/report.html"
   },
   "repository": {
     "type": "git",
@@ -29,7 +36,12 @@
     "jest-html-reporters": "^1.2.1",
     "jest-junit": "^10.0.0",
     "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
     "ts-jest": "^26.0.0",
     "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "google-protobuf": "^3.12.1",
+    "grpc": "^1.24.2"
   }
 }
