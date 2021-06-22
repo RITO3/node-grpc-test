@@ -42,6 +42,6 @@
   },
   "dependencies": {
     "google-protobuf": "^3.17.3",
-    "grpc": "^1.24.2"
+    "grpc": "^1.24.10"
   }
 }
